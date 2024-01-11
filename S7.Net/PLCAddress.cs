@@ -1,6 +1,6 @@
 ﻿namespace S7.Net
 {
-    internal class PLCAddress
+    public class PLCAddress
     {
         private DataType dataType;
         private int dbNumber;
@@ -47,8 +47,9 @@
         {
             bitNumber = -1;
             dbNumber = 0;
+            string head = input.Substring(0, 2);
 
-            switch (input.Substring(0, 2))
+            switch (head)
             {
                 case "DB":
                     string[] strings = input.Split(new char[] { '.' });
@@ -153,7 +154,8 @@
                     varType = VarType.DWord;
                     return;
                 default:
-                    switch (input.Substring(0, 1))
+                    string single = input.Substring(0, 1);
+                    switch (single)
                     {
                         case "E":
                         case "I":

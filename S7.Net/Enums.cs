@@ -212,10 +212,11 @@
         /// DateTimeLong variable type
         /// </summary>
         DateTimeLong,
-        
+
         /// <summary>
         /// S7 TIME variable type - serialized as S7 DInt and deserialized as C# TimeSpan 
         /// </summary>
-        Time
+        Time,
+
     }
 }
