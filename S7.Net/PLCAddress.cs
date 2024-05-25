@@ -51,29 +51,29 @@
 
             switch (head)
             {
-                case "DB":
+                case "DB"://DB99.DBB70  DB99.DBW70   DB99.DBD70  DB99.DBX7.0
                     string[] strings = input.Split(new char[] { '.' });
                     if (strings.Length < 2)
                         throw new InvalidAddressException("To few periods for DB address");
 
                     dataType = DataType.DataBlock;
-                    dbNumber = int.Parse(strings[0].Substring(2));
-                    address = int.Parse(strings[1].Substring(3));
+                    dbNumber = int.Parse(strings[0].Substring(2));//99
+                    address = int.Parse(strings[1].Substring(3));//70 或者 7
 
                     string dbType = strings[1].Substring(0, 3);
                     switch (dbType)
                     {
-                        case "DBB":
+                        case "DBB"://DB99.DBB70
                             varType = VarType.Byte;
                             return;
-                        case "DBW":
+                        case "DBW"://DB99.DBW70
                             varType = VarType.Word;
                             return;
-                        case "DBD":
+                        case "DBD"://DB99.DBD70
                             varType = VarType.DWord;
                             return;
-                        case "DBX":
-                            bitNumber = int.Parse(strings[2]);
+                        case "DBX"://DB99.DBX7.0
+                            bitNumber = int.Parse(strings[2]); //strings[2]=0
                             if (bitNumber > 7)
                                 throw new InvalidAddressException("Bit can only be 0-7");
                             varType = VarType.Bit;
