@@ -22,8 +22,8 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);CS1591;NETSDK1138</NoWarn>
-    <AssemblyVersion>2024.0723.0.0</AssemblyVersion>
-    <FileVersion>2024.0723.0.0</FileVersion>
+    <AssemblyVersion>2027.0724.1.0</AssemblyVersion>
+    <FileVersion>2027.0724.1.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net452' Or '$(TargetFramework)' == 'net462' Or '$(TargetFramework)' == 'netstandard2.0' ">
